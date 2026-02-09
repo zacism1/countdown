@@ -1,4 +1,4 @@
-  const targetDate = new Date(2026, 3, 17, 12, 0, 0);
+const targetDate = new Date(2026, 3, 17, 12, 0, 0);
 const openTime = new Date();
 
 const daysEl = document.getElementById("days");
@@ -54,11 +54,11 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 const enemyLayer = document.getElementById("enemy-layer");
-const enemyCount = 5;
+const enemyCount = 10;
 const enemies = [];
 
 function createEnemy(index) {
-  const size = 48 + Math.random() * 36;
+  const size = (48 + Math.random() * 36) * 1.5;
   const element = document.createElement("img");
   element.src = "enemy.png";
   element.alt = `Enemy ${index + 1}`;
