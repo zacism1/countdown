@@ -24,7 +24,8 @@ body {
     linear-gradient(160deg, var(--bg-mid), var(--bg-deep));
   color: var(--ink);
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .scene {
@@ -70,15 +71,18 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 5;
+  z-index: 10;
 }
 
 .enemy {
   position: absolute;
   width: 64px;
   height: 64px;
+  z-index: 11;
+  opacity: 0.9;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
   mix-blend-mode: screen;
+  will-change: transform;
 }
 
 .card {
@@ -171,6 +175,10 @@ h1 {
   .countdown {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .enemy {
+    mix-blend-mode: normal;
+  }
 }
 
 @media (max-width: 540px) {
@@ -218,6 +226,11 @@ h1 {
 }
 
 @media (max-height: 520px) {
+  body {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .scene {
     padding: 32px 16px;
   }
