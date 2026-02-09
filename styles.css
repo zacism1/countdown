@@ -227,6 +227,16 @@ h1 {
     display: none;
   }
 
+  .scene {
+    padding: 48px 12px;
+  }
+
+  .card {
+    width: min(92vw, 420px);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   .scene::before {
     content: "";
     position: absolute;
