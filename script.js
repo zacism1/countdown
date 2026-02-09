@@ -1,32 +1,10 @@
 const targetDate = new Date(2026, 3, 17, 12, 0, 0);
-const openTime = new Date();
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
-const targetDisplayEl = document.getElementById("target-display");
-const openTimeEl = document.getElementById("open-time");
-
 const pad = (value) => String(value).padStart(2, "0");
-
-const targetFormatter = new Intl.DateTimeFormat(undefined, {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  hour: "2-digit",
-  minute: "2-digit",
-});
-
-const timeFormatter = new Intl.DateTimeFormat(undefined, {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-});
-
-targetDisplayEl.textContent = `Target time: ${targetFormatter.format(targetDate)}`;
-openTimeEl.textContent = `Page opened at ${timeFormatter.format(openTime)} (local time)`;
 
 function updateCountdown() {
   const now = new Date();
@@ -52,7 +30,7 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 const enemyLayer = document.getElementById("enemy-layer");
-const enemyCount = 10;
+const enemyCount = 5;
 const enemies = [];
 
 function createEnemy(index) {
