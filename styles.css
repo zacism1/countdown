@@ -216,7 +216,7 @@ h1 {
 
 @media (max-width: 540px) and (orientation: portrait) {
   body {
-    background: url("left.JPEG") center/cover no-repeat fixed;
+    background: url("left.JPEG") center top / cover no-repeat fixed;
   }
 
   .atmosphere {
