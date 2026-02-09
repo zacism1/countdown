@@ -5,7 +5,6 @@ const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
-const totalSecondsEl = document.getElementById("total-seconds");
 const targetDisplayEl = document.getElementById("target-display");
 const openTimeEl = document.getElementById("open-time");
 
@@ -47,7 +46,6 @@ function updateCountdown() {
   hoursEl.textContent = pad(hours);
   minutesEl.textContent = pad(minutes);
   secondsEl.textContent = pad(seconds);
-  totalSecondsEl.textContent = totalSeconds.toLocaleString();
 }
 
 updateCountdown();
